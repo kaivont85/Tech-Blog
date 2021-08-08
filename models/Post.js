@@ -1,10 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// the Post model extends the sequelize Model
+
 class Post extends Model {}
 
-// create fields/columns for Post model
+
 Post.init(
   {
     id: {

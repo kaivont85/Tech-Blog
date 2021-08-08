@@ -1,18 +1,12 @@
-// Dependencies
-// the router and the database
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-
-// Models
 const { Post, User, Comment } = require('../models');
-
-// Middleware authorization to redirect unauthenticated users to the login page
 const withAuth = require('../utils/auth');
 
-// Render dashboard page - only for a logged-in user
+
 router.get('/', withAuth, async (req, res) => {
   try {
-    // All of the users posts are obtained from the database
+   
     const postData = await Post.findAll({
       where: { user_id: req.session.user_id },
       attributes: ['id', 'title', 'content', 'created_at'],
@@ -32,7 +26,7 @@ router.get('/', withAuth, async (req, res) => {
       ],
     });
 
-    // serialize data before passing to template
+  
     const posts = postData.map((post) => post.get({ plain: true }));
     res.render('dashboard', {
       posts,
@@ -44,10 +38,10 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
-// A route to edit a post
+
 router.get('/edit/:id', withAuth, async (req, res) => {
   try {
-    // Find one user from the database
+    
     const postData = await Post.findOne({
       where: { id: req.params.id },
       attributes: ['id', 'title', 'content', 'created_at'],

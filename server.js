@@ -7,11 +7,10 @@ const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 const sequelize = require('./config/connection');
 
-// Create a new sequelize store using the express-session package
-//request to create a storage table
+
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-// Sets up the Express App
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
