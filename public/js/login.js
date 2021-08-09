@@ -20,7 +20,6 @@ async function loginFormHandler(event) {
     
         document.location.replace('/dashboard');
         
-        alert("hit")
       } else {
         alert(response.statusText);
       }
