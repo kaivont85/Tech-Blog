@@ -98,6 +98,7 @@ router.post('/', withAuth, (req, res) => {
 });
 // Update a post's title or text
 router.put('/:id', withAuth, (req, res) => {
+  
   Post.update({
     where: {
       id: req.params.id,
