@@ -17,7 +17,10 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
+    
         document.location.replace('/dashboard');
+        
+        alert("hit")
       } else {
         alert(response.statusText);
       }
@@ -25,5 +28,5 @@ async function loginFormHandler(event) {
   }
   
   document
-    .querySelector('#login-form')
-    .addEventListener('submit', loginFormHandler);
+    .querySelector('#login-button')
+    .addEventListener('click', loginFormHandler);
