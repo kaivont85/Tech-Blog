@@ -2,21 +2,21 @@ const { Post } = require('../models');
 
 const postData = [
   {
-    title: 'Pipe raises funding',
+    title: 'javscript help',
     content:
-      'Pipe makes recurring revenue streams tradable for their annual value, meaning more cash flow for scaling companies. No discounts, no debt, no dilution..',
+      'How many different functions could there be??? ',
     user_id: 1,
   },
   {
-    title: 'Investors hooked on Minnow',
+    title: 'PC or MAC',
     content:
-      'Seattle-based startup Minnow, makers of a contactless food delivery and pickup pod, has raised $3 million in seed funding.',
+      'This topic is always a hot discussion, but what is your biggest reason for using your choice of machine?',
     user_id: 2,
   },
   {
-    title: 'SnackPass!',
+    title: 'Tech Jobs',
     content:
-      'Why wait in line when you can simply order your food on your phone and pick your order when you get to the restaurant?',
+      'Would it not be nice to just have a place to go to that was just handing out jobs in this field left and right? let me know what you think is the best language to learn',
     user_id: 3,
   },
 ];
