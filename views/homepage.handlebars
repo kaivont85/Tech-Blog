@@ -2,7 +2,14 @@
 
     {{#each posts as |post| }}
 
-    {{> post-info post}}
+   <div class="card">
+    <div class="card-header">
+        <h3><a class="link" href="/post/{{post.id}}">{{post.title}}</a></h3>
+        {{!-- <p>Posted by {{user.username}} on {{format_date created_at}}</p> --}}
+    </div>
+    <p class="card-body">{{post.content}}</p>
+</div>
+    {{!-- {{> post-info post}} --}}
 
     {{/each}}
 
